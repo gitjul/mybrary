@@ -1,0 +1,34 @@
+body {
+  color: #131313;
+  padding-bottom: 60px;
+}
+
+h1, h2, h3 {
+  font-family: 'EB Garamond', serif;
+}
+
+// Common styles
+
+.iblock { display: inline-block; }
+
+.clear { clear: both; }
+
+.center { text-align: center; }
+
+// Header
+
+header {
+  margin-bottom: 15px;
+  a#logo {
+    text-decoration: none;
+    color: #131313;
+    h1 {
+      font-size: 58px;
+      line-height: 80px;
+      font-family: 'EB Garamond', serif;
+      font-weight: normal;
+      font-style: normal;
+      #my { font-family: 'Parisienne'; }
+    }
+  }
+}

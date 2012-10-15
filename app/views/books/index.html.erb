@@ -1,9 +1,15 @@
-<h1>Books</h1>
 <% @books.each do |book| %>
   <div class="book-wrapper">
-    <%= image_tag book.cover %>
-    <%= book.title %>
-    <%= book.authors %>
-    <%= book.state %>
+    <div class="thumb iblock pull-left">
+      <%= link_to book do %>
+        <%= image_tag book.cover %>
+      <% end %>
+    </div>
+    <div class="info iblock pull-left">
+      <h3 class=><%= book.title %></h3>
+      <%= book.authors %>
+      <%= book.state %>
+    </div>
+    <div class="clear"></div>
   </div>
 <% end %>

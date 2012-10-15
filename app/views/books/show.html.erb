@@ -1,2 +1,6 @@
-<h1><%= @book.title %></h1>
-<%= image_tag @book.cover %>
+<% content_for :title, "Show cover" %>
+<div class="show-cover center">
+  <%= image_tag @book.cover %>
+  <h2><%= @book.title %></h2>
+  <%= link_to "Back", :back %>
+</div>
