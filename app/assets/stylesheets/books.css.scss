@@ -13,7 +13,13 @@
   }
   .status {
     padding: 10px 10px 0 0;
-    .dropdown-toggle { cursor: pointer; }
+    a.dropdown-toggle { cursor: pointer; }
+    a.dropdown-toggle:hover { text-decoration: none; }
+    .dropdown-menu {
+      right: -6px;
+      top: 25px;
+      a:hover { background: #996633; }
+    }
   }
 }
 
