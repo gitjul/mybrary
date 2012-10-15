@@ -1,7 +1,7 @@
 <h1>Books</h1>
 <% @books.each do |book| %>
   <div class="book-wrapper">
-    <%= book.cover %>
+    <%= image_tag book.cover %>
     <%= book.title %>
     <%= book.authors %>
     <%= book.state %>

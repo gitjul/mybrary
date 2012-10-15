@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Book.create(:title => "A Title to Remember", :authors => "Kevin Pritchard", :cover => "cover.png", :state => "None")
+Book.create(:title => "Another One", :authors => "Ally Hermann-Mayer, Gill Bates", :cover => "cover.png", :state => "Not interested")
+Book.create(:title => "Hell on Wheels", :authors => "Sugar Cane", :cover => "cover.png", :state => "Read")
+Book.create(:title => "Life of Brian Adams", :authors => "Roger Collins", :cover => "cover.png", :state => "Wanna read")
