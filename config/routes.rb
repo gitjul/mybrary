@@ -1,5 +1,9 @@
 Mybrary::Application.routes.draw do
-  resources :books, :only => [:index, :show]
+  resources :books, :only => [:index, :show] do
+    member do
+      post 'change_status'
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
