@@ -1,7 +1,12 @@
 body {
   color: #131313;
+  font-size: 16px;
   padding-bottom: 60px;
 }
+
+a { color: #996633; }
+
+a:hover { color: #663333; }
 
 h1, h2, h3 {
   font-family: 'EB Garamond', serif;
@@ -31,4 +36,13 @@ header {
       #my { font-family: 'Parisienne'; }
     }
   }
+}
+
+// Pagination
+
+.pagination {
+  text-align: center;
+  margin-top: 40px;
+  span { margin: 0; }
+  .current, a { padding: 8px; }
 }
