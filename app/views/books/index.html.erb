@@ -8,7 +8,9 @@
     <div class="info iblock pull-left">
       <h3 class=><%= book.title %></h3>
       <%= book.authors %>
-      <%= book.state %>
+    </div>
+    <div class="status iblock pull-right">
+      <%= toggle_status_info(book.state) %>
     </div>
     <div class="clear"></div>
   </div>
