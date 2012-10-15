@@ -1,6 +1,6 @@
 .book-wrapper {
   padding: 10px 0;
-  width: 600px;
+  width: 640px;
   margin: auto;
   .thumb {
     max-width: 100px;
@@ -13,6 +13,7 @@
   }
   .status {
     padding: 10px 10px 0 0;
+    .dropdown-toggle { cursor: pointer; }
   }
 }
 

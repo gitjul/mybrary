@@ -10,7 +10,23 @@
       <%= book.authors %>
     </div>
     <div class="status iblock pull-right">
-      <%= toggle_status_info(book.state) %>
+      <div class="dropdown pull-right">
+        <a class="dropdown-toggle" data-toggle="dropdown" id="dLabel" role="button" data-target="#"><%= status = toggle_status_info(book.state) %></a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+          <% unless status ==  "I don't have this book" %>
+            <li><%= link_to "I don't have this book", change_status_book_path(book, :status => "None"), :method => :post %></li>
+          <% end %>
+          <% unless status ==  "I want to read this book" %>
+            <li><%= link_to "I want to read this book", change_status_book_path(book, :status => "Wanna read"), :method => :post %></li>
+          <% end %>
+          <% unless status ==  "I've read this book" %>
+            <li><%= link_to "I've read this book", change_status_book_path(book, :status => "Read"), :method => :post %></li>
+          <% end %>
+          <% unless status ==  "I'm not interested" %>
+            <li><%= link_to "I'm not interested", change_status_book_path(book, :status => "Not interested"), :method => :post %></li>
+          <% end %>
+        </ul>
+      </div>
     </div>
     <div class="clear"></div>
   </div>
