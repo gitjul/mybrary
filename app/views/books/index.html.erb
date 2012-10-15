@@ -11,7 +11,7 @@
     </div>
     <div class="status iblock pull-right">
       <div class="dropdown pull-right">
-        <a class="dropdown-toggle" data-toggle="dropdown" id="dLabel" role="button" data-target="#"><%= status = toggle_status_info(book.state) %></a>
+        <a class="dropdown-toggle" data-toggle="dropdown" id="dLabel" role="button" data-target="#" title="Click to change book status"><%= status = toggle_status_info(book.state) %></a>
         <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
           <% unless status ==  "I don't have this book" %>
             <li><%= link_to "I don't have this book", change_status_book_path(book, :status => "None"), :method => :post %></li>
