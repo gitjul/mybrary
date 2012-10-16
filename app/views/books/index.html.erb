@@ -14,16 +14,16 @@
         <a class="dropdown-toggle" data-toggle="dropdown" id="dLabel" role="button" data-target="#" title="Click to change book status"><%= status = toggle_status_info(book.status) %></a>
         <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
           <% unless status ==  "I don't have this book" %>
-            <li><%= link_to "I don't have this book", change_status_book_path(book, :status => "None"), :method => :post %></li>
+            <li><%= link_to "I don't have this book", change_status_book_path(book, :status => 0), :method => :post %></li>
           <% end %>
           <% unless status ==  "I want to read this book" %>
-            <li><%= link_to "I want to read this book", change_status_book_path(book, :status => "Wanna read"), :method => :post %></li>
+            <li><%= link_to "I want to read this book", change_status_book_path(book, :status => 1), :method => :post %></li>
           <% end %>
           <% unless status ==  "I've read this book" %>
-            <li><%= link_to "I've read this book", change_status_book_path(book, :status => "Read"), :method => :post %></li>
+            <li><%= link_to "I've read this book", change_status_book_path(book, :status => 2), :method => :post %></li>
           <% end %>
           <% unless status ==  "I'm not interested" %>
-            <li><%= link_to "I'm not interested", change_status_book_path(book, :status => "Not interested"), :method => :post %></li>
+            <li><%= link_to "I'm not interested", change_status_book_path(book, :status => 3), :method => :post %></li>
           <% end %>
         </ul>
       </div>

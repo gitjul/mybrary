@@ -1,14 +1,14 @@
 module BooksHelper
   def toggle_status_info(status = nil)
     case status
-      when "None"
+      when 0
         "I don't have this book"
-      when "Not interested"
-        "I'm not interested"
-      when "Read"
-        "I've read this book"
-      when "Wanna read"
+      when 1
         "I want to read this book"
+      when 2
+        "I've read this book"
+      when 3
+        "I'm not interested"
       when nil
         "Change book status"
     end
