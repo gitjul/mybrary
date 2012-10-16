@@ -1,4 +1,5 @@
 .book-wrapper {
+  font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
   width: 640px;
   margin: auto;
   .thumb {
@@ -7,7 +8,6 @@
   .info {
     padding: 0 20px;
     width: 320px;
-    font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
     h3 { margin: 0px; }
   }
   .status {
