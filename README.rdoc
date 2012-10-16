@@ -4,7 +4,7 @@ An app for managing a home library.
 
 == What you'll need
 
-Thinking Sphinx uses the Sphinx engine, which you'll need to install:
+Thinking Sphinx uses the Sphinx search engine, which you'll need to install:
 http://freelancing-god.github.com/ts/en/installing_sphinx.html
 
 Rake tasks:
@@ -13,12 +13,11 @@ http://freelancing-god.github.com/ts/en/rake_tasks.html
 1. To index your data:
     rake thinking_sphinx:index
 
-2. To run the searchd deamon:
+2. To run searchd:
     rake thinking_sphinx:start
 
-3. Remember to reindex after adding data:
+3. Remember to reindex after adding data - you can also schedule this as a regular task in your crontab file:
     rake thinking_sphinx:reindex
-You can also schedule this as a regular task in your crontab file.
 
-4. After changing configuration, remember to rebuild indexes and restart deamon:
+4. After changing configuration, remember to rebuild indexes and restart daemon:
     rake thinking_sphinx:rebuild
