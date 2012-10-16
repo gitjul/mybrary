@@ -6,8 +6,44 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Book.create(:title => "A Title to Remember", :authors => "Kevin Pritchard", :cover => "cover.png", :status => 0)
-Book.create(:title => "Another One", :authors => "Ally Hermann-Mayer, Gill Bates", :cover => "cover.png", :status => 1)
-Book.create(:title => "Hell on Wheels", :authors => "Sugar Cane", :cover => "cover.png", :status => 2)
-Book.create(:title => "Life of Brian Adams", :authors => "Roger Collins", :cover => "cover.png", :status => 3)
-Book.create(:title => "Noone Knows", :authors => "Norman Miller", :cover => "cover.png")
+def gen_author(other = '')
+  firstnames = ['Al', 'Ally', 'Betty', 'Cecilia', 'Clark', 'Dan', 'Danielle',
+                'Pat', 'John', 'Roger', 'Norman', 'Kevin', 'Kate', 'Gill', 'Fred']
+
+  lastnames = ['Hermann', 'Corman', 'Cane', 'Bates', 'Miller', 'Pritchard',
+               'Morgan', 'Freeman', 'Letinsky', 'Davies', 'Chesterfield', 'Gibbons',
+               'Tillard', 'Huntsman']
+
+  begin
+    author = firstnames.sample + ' ' + lastnames.sample
+  end until author != other
+  return author
+end
+
+def gen_authors
+  first_author = gen_author
+  rand(5) == 0 ? first_author + ', ' + gen_author(first_author) : first_author
+end
+
+def gen_title
+  nouns = ['Chair', 'Cat', 'Table', 'Secret', 'Ruby', 'Past', 'Life', 'Wonder',
+           'House', 'Trees', 'Hell', 'Heaven', 'Lust', 'Childhood', 'Vegetables',
+           'Cheese', 'Elves', 'Demon', 'Angels', 'Woman', 'Whale', 'Rain']
+
+  preps = ['in', 'with', 'of', 'from', 'and', 'for', 'as', 'like', 'above',
+           'among']
+
+  nouns.sample + ' ' + [preps.sample + ' ', ''].sample + nouns.sample
+end
+
+def generate(n)
+  for i in 0..n
+    title = gen_title
+    Book.create(:title => title,
+                :authors => gen_authors,
+                :cover => 'cover.png',
+                :status => rand(4)) unless Book.find_by_title(title)
+  end
+end
+
+generate(250)
