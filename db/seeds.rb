@@ -37,7 +37,7 @@ def gen_title
 end
 
 def generate(n)
-  for i in 0..n
+  for i in 0..n-1
     title = gen_title
     Book.create(:title => title,
                 :authors => gen_authors,
