@@ -3,6 +3,12 @@ Mybrary::Application.routes.draw do
     member do
       post 'change_status'
     end
+    collection do
+      get 'to_read'
+      get 'read'
+      get 'not_interested'
+      get 'undefined'
+    end
   end
 
   # The priority is based upon order of creation:
