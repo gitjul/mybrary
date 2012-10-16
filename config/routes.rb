@@ -3,13 +3,12 @@ Mybrary::Application.routes.draw do
     member do
       post 'change_status'
     end
-    collection do
-      get 'to_read'
-      get 'read'
-      get 'not_interested'
-      get 'undefined'
-    end
   end
+
+  match '/to_read' => 'books#to_read'
+  match '/read' => 'books#read'
+  match '/not_interested' => 'books#not_interested'
+  match '/undefined' => 'books#undefined'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
