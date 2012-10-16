@@ -21,3 +21,7 @@ http://freelancing-god.github.com/ts/en/rake_tasks.html
 
 4. After changing configuration, remember to rebuild indexes and restart daemon:
     rake thinking_sphinx:rebuild
+
+== Oh, and
+
+Change the user and password appropriately in your config/database.yml file, of course.
