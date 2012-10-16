@@ -7,8 +7,9 @@ An app for managing a home library.
 Thinking Sphinx uses the Sphinx search engine, which you'll need to install:
 http://freelancing-god.github.com/ts/en/installing_sphinx.html
 
-Rake tasks:
-http://freelancing-god.github.com/ts/en/rake_tasks.html
+Sphinx works only with mysql or postgres - I'm using mysql.
+
+Rake tasks: http://freelancing-god.github.com/ts/en/rake_tasks.html
 
 1. To index your data:
     rake thinking_sphinx:index
