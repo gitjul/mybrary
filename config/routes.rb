@@ -9,7 +9,6 @@ Mybrary::Application.routes.draw do
   match '/read' => 'books#read'
   match '/not_interested' => 'books#not_interested'
   match '/dont_have' => 'books#dont_have'
-  match '/undefined' => 'books#undefined'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

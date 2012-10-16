@@ -9,8 +9,6 @@ module BooksHelper
         "I've read this book"
       when 3
         "I'm not interested"
-      when nil
-        "Status not defined"
     end
   end
 

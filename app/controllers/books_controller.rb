@@ -32,10 +32,6 @@ class BooksController < ApplicationController
     @books = Book.dont_have.page(params[:page]).per(4)
   end
 
-  def undefined
-    @books = Book.undefined.page(params[:page]).per(4)
-  end
-
   def change_status
     @book = Book.find(params[:id])
     @book.update_attribute(:status, params[:status])

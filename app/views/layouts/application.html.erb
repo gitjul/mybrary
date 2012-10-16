@@ -26,11 +26,10 @@
       <nav class="center">
         <ul>
           <li><%= link_to_unless_current "All", root_url %></li>
+          <li><%= link_to_unless_current "Don't have it", dont_have_url %></li>
           <li><%= link_to_unless_current "Wanna read", to_read_url %></li>
           <li><%= link_to_unless_current "Have read", read_url %></li>
-          <li><%= link_to_unless_current "Don't have it", dont_have_url %></li>
           <li><%= link_to_unless_current "Not interested", not_interested_url %></li>
-          <li><%= link_to_unless_current "Unknown status", undefined_url %></li>
         </ul>
       </nav>
     </div> <!-- /container -->
