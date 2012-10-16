@@ -1,6 +1,14 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.page(params[:page]).per(3)
+    if params[:search]
+      @books = Book.search params[:search],
+                  :page => params[:page], :per => 4,
+                  :match_mode => :boolean,
+                  :sort_mode => :extended,
+                  :order => "@relevance DESC, created_at DESC"
+    else 
+      @books = Book.page(params[:page]).per(4)
+    end
   end
 
   def show
