@@ -12,5 +12,17 @@ module BooksHelper
       when nil
         "Change book status"
     end
-  end 
+  end
+
+  def make_links(book, status)
+    html = ""
+    for code in 0..3
+      text = toggle_status_info(code)
+      unless status == text
+        html <<"<li>#{link_to text, change_status_book_path(book, :status => code),
+          {:method => :post}}</li>"
+      end
+    end
+    raw(html)
+  end
 end
