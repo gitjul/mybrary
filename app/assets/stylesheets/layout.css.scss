@@ -23,17 +23,32 @@ h1, h2, h3 {
 // Header
 
 header {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  padding: 20px 0;
   a#logo {
     text-decoration: none;
     color: #131313;
     h1 {
-      font-size: 58px;
+      font-size: 68px;
       line-height: 80px;
       font-family: 'EB Garamond', serif;
       font-weight: normal;
       font-style: normal;
-      #my { font-family: 'Parisienne'; }
+      #my {
+        font-family: 'Parisienne';
+        font-size: 74px;
+      }
+    }
+  }
+  form {
+    margin: 0;
+    line-height: 100px;
+    .search-wrapper {
+      label.hidden {
+        color: #fff;
+        width: 0px;
+      }
+      input { margin-bottom: 0; }
     }
   }
 }
@@ -42,7 +57,26 @@ header {
 
 .pagination {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 60px;
   span { margin: 0; }
   .current, a { padding: 8px; }
+}
+
+// Button
+
+.btn-search {
+  background-color: hsl(10, 49%, 35%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#aa4d3a", endColorstr="#843c2d");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#aa4d3a), to(#843c2d));
+  background-image: -moz-linear-gradient(top, #aa4d3a, #843c2d);
+  background-image: -ms-linear-gradient(top, #aa4d3a, #843c2d);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #aa4d3a), color-stop(100%, #843c2d));
+  background-image: -webkit-linear-gradient(top, #aa4d3a, #843c2d);
+  background-image: -o-linear-gradient(top, #aa4d3a, #843c2d);
+  background-image: linear-gradient(#aa4d3a, #843c2d);
+  border-color: #843c2d #843c2d hsl(10, 49%, 32.5%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.16);
+  -webkit-font-smoothing: antialiased;
 }
