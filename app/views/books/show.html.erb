@@ -1,6 +1,6 @@
 <% content_for :title, "Show cover" %>
 <div class="show-cover center">
-  <%= image_tag @book.cover %>
+  <%= image_tag @book.cover, :alt => @book.title + " cover" %>
   <h2><%= @book.title %></h2>
   <%= link_to "Back", :back %>
 </div>

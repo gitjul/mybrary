@@ -2,11 +2,11 @@
   <div class="book-wrapper">
     <div class="thumb iblock pull-left">
       <%= link_to book do %>
-        <%= image_tag book.cover %>
+        <%= image_tag book.cover, :alt => book.title + " cover" %>
       <% end %>
     </div>
     <div class="info iblock pull-left">
-      <h3><%= book.title %></h3>
+      <h2><%= book.title %></h2>
       <%= book.authors %>
     </div>
     <div class="status iblock pull-right">

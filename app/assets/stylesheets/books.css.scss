@@ -8,7 +8,10 @@
   .info {
     padding: 0 20px;
     width: 320px;
-    h3 { margin: 0px; }
+    h2 {
+      margin: 0px;
+      font-size: 24px;
+    }
   }
   .status {
     padding-top: 4px;
