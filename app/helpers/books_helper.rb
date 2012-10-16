@@ -10,7 +10,7 @@ module BooksHelper
       when 3
         "I'm not interested"
       when nil
-        "Change book status"
+        "Status not defined"
     end
   end
 
