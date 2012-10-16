@@ -38,3 +38,4 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem 'kaminari'
+gem 'thinking-sphinx', '2.0.10'
