@@ -56,7 +56,8 @@ header {
 // Navigation
 
 nav {
-  margin: 15px 0;
+  margin: 25px 0 10px 0;
+  height: 36px;
   ul {
     list-style-type: none;
     margin: 0;
@@ -65,9 +66,13 @@ nav {
       display: inline-block;
       font-family: 'EB Garamond', serif;
       word-spacing: 2px;
+      a {
+        padding: 8px 10px;
+        margin: 0 15px;
+      }
     }
-    li.active, li > a {
-      padding: 8px 10px;
+    li.active {
+      padding: 0 10px;
       margin: 0 15px;
     }
   }
@@ -78,7 +83,7 @@ nav {
 
 .pagination {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 70px;
   span { margin: 0; }
   .current, a { padding: 8px; }
 }
