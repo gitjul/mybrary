@@ -13,6 +13,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+/log/searchd.development.pid
 
 # Ignore Sphinx’s configuration and indexes in development
 config/development.sphinx.conf
