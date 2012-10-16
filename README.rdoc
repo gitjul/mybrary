@@ -5,7 +5,7 @@ An app for managing a home library.
 == What you'll need
 
 To generate a lot of random books, run:
-	 rake db:seed
+    rake db:seed
 
 Thinking Sphinx uses the Sphinx search engine, which you'll need to install:
 http://freelancing-god.github.com/ts/en/installing_sphinx.html
