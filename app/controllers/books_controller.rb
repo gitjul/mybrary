@@ -28,6 +28,10 @@ class BooksController < ApplicationController
     @books = Book.not_interested.page(params[:page]).per(4)
   end
 
+  def dont_have
+    @books = Book.dont_have.page(params[:page]).per(4)
+  end
+
   def undefined
     @books = Book.undefined.page(params[:page]).per(4)
   end
