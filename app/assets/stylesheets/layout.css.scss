@@ -1,5 +1,6 @@
 body {
   color: #131313;
+  font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
   font-size: 16px;
   padding-bottom: 60px;
 }
@@ -52,6 +53,27 @@ header {
     }
   }
 }
+
+// Navigation
+
+nav {
+  margin: 15px 0;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    font-size: 19px;
+    li {
+      display: inline-block;
+      font-family: 'EB Garamond', serif;
+      word-spacing: 2px;
+    }
+    li.active, li > a {
+      padding: 8px 10px;
+      margin: 0 10px;
+    }
+  }
+}
+
 
 // Pagination
 

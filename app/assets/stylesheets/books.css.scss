@@ -1,5 +1,4 @@
 .book-wrapper {
-  padding: 10px 0;
   width: 640px;
   margin: auto;
   .thumb {
@@ -12,7 +11,7 @@
     h3 { margin: 0px; }
   }
   .status {
-    padding: 10px 10px 0 0;
+    padding-top: 10px;
     a.dropdown-toggle { cursor: pointer; }
     a.dropdown-toggle:hover { text-decoration: none; }
     .dropdown-menu {
@@ -21,6 +20,10 @@
       a:hover { background: #996633; }
     }
   }
+}
+
+.book-wrapper + .book-wrapper {
+  margin-top: 20px;
 }
 
 .show-cover {
