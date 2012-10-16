@@ -6,14 +6,14 @@
       <% end %>
     </div>
     <div class="info iblock pull-left">
-      <h3 class=><%= book.title %></h3>
+      <h3><%= book.title %></h3>
       <%= book.authors %>
     </div>
     <div class="status iblock pull-right">
       <div class="status-text"><%= status = toggle_status_info(book.status) %></div>
       <div class="dropdown pull-right">
-        <a class="dropdown-toggle" data-toggle="dropdown" id="dLabel" role="button" data-target="#" title="Click to see options">Change status</a>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+        <a class="dropdown-toggle" data-toggle="dropdown" role="button" data-target="#" title="Click to see options">Change status</a>
+        <ul class="dropdown-menu">
           <%= make_links(book, status) %>
         </ul>
       </div>
