@@ -33,7 +33,11 @@ def gen_title
   preps = ['in', 'with', 'of', 'from', 'and', 'for', 'as', 'like', 'above',
            'among']
 
-  nouns.sample + ' ' + [preps.sample + ' ', ''].sample + nouns.sample
+  first_noun = nouns.sample
+  begin
+    second_noun = nouns.sample
+  end until second_noun != first_noun
+  return first_noun + ' ' + [preps.sample + ' ', ''].sample + second_noun
 end
 
 def generate(n)
